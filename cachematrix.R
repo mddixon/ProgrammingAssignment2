@@ -2,13 +2,19 @@
 ## the inverse was previously computed, then the inverse is recalled
 ## from cache to save computation time.
 ##
-## Example:
-##   >A <- makeCacheMatrix(matrix(c(1,2,2,1), 2, 2))
-##   >cacheSolve(A)
-## Output:
-##              [,1]       [,2]
-##   [1,] -0.3333333  0.6666667
-##   [2,]  0.6666667 -0.3333333
+## Example use in R console:
+##  >
+##  > A <- makeCacheMatrix(matrix(c(1,2,2,1), 2, 2))
+##  > cacheSolve(A)
+##          [,1]       [,2]
+##  [1,] -0.3333333  0.6666667
+##  [2,]  0.6666667 -0.3333333
+##  > cacheSolve(A)
+##  getting cached data
+##          [,1]       [,2]
+##  [1,] -0.3333333  0.6666667
+##  [2,]  0.6666667 -0.3333333
+##  >
 
 
 ## Creates a special "matrix" object that can cache the inverse
